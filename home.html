@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Gagal</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="about.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="home">
+        <p id="deskripsi">Website ini terdiri dari 4 bagian yaitu home, dashboard, biodata, dan contact </p>
+        <div class="rocky">
+            <video playsinline autoplay muted loop style>
+                <source src="obito.mp4" type="video/mp4" id="videopar"></video>
+
+
+            <div class="right">
+                <img src="playbutton.png" id="icon">
+            </div>
+
+            <audio id="mysong">
+                <source src="tragic2.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <section class="wrapper">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </section>
+
+        <div class="main4">
+            <img src="./Asset 1 1.png" alt="">
+            <div class="container nama">
+                <h3>Muh Al Misri H</h3>
+            </div>
+            <div class="container nim">
+                <h3>210210501041</h3>
+            </div>
+            <div class="container kelas">
+                <h3>Tekom A</h3>
+            </div>
+            <div class="container hoby">
+                <h3>Gitar</h3>
+            </div>
+            <div class="container cita-cita">
+                <h3>Sukses</h3>
+            </div>
+        </div>
+
+
+        <div class="main3">
+            <div class="img"></div>
+            <div class="about">
+                <p>Halo perkenalkan nama saya Muh Al Misri H. Saya lahir di Kota Makassar 6 Mei 2003 anak kelima dari 5 bersaudara dan sekarang saya menempuh pendidikan di Universitas Negeri Makassar Fakultas Teknik Jurusan Teknik Informatika dan Komputer Prodi Teknik Komputer.</p>
+                <div class="history">
+                    <p>Riwayat Pendidikan:</p>
+                    <p>SDN NEGERI MANGKURA 1</p>
+                    <p>SMP NEGERI 6 MAKASSAR</p>
+                    <p>SMA NEGERI 20 MAKASSAR</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main2">
+            <h1>Contact Me</h1>
+            <div class="login-box">
+                <form onsubmit="contact()">
+                    <div class="user-box">
+                        <input type="text" id="name" autocomplete="off" required>
+                        <label>Name</label>
+                    </div>
+                    
+                    <div class="user-box">
+                        <input type="email" id="email" autocomplete="off" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="textarea">
+                        <label>Message</label>
+                        <input type="textarea" id="text" autocomplete="off" required>
+                    </div>
+
+                    <div class="button-form">
+                      <button type="submit" class="submit" >
+                           Send
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/Cryptsyy"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/alhdytt/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/n0eff0rt"><i class="fab fa-twitter"></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=6285904439035&text&type=phone_number&app_absent=0"><i
+                        class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="main5">
+
+        </div>
+    </div>
+
+
+    <script>
+
+        function login(){
+            var user = document.getElementById("name").value;
+            var pass = document.getElementById("email").value;
+            var error = document.querySelector ("text");
+
+            if (user == "al" && pass =="al"){
+                window.location.href="home.html";
+            }else{
+                error.style.display ="inline-block";
+            }
+        }
+
+        function contact() {
+            alert("complete message")
+        }
+        
+
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            if (mysong.paused) {
+                mysong.play();
+                icon.src = "pausee.png";
+            } else {
+                mysong.pause();
+                icon.src = "playbutton.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
